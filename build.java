@@ -1,6 +1,3 @@
-//#!/usr/bin/java --enable-preview --source 21
-// java --enable-preview --source 21 build.java
-
 import javax.tools.*;
 import java.io.*;
 import java.net.URI;

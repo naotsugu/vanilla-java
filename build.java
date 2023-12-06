@@ -68,6 +68,7 @@ void jar() throws Exception {
 
 
 void run() throws Exception {
+    if (!Files.exists(jar)) jar();
     execCommand("java", "-cp", libDir.toString() + "/*", main);
 }
 

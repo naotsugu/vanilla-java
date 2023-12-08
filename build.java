@@ -134,9 +134,9 @@ void putJarEntry(Path source, JarOutputStream jar) throws IOException {
 void delete(Path... paths) throws Exception {
     for (Path path : paths) {
         if (Files.isDirectory(path)) {
-            Files.walk(outDir).sorted(Comparator.reverseOrder()).map(Path::toFile).forEach(File::delete);
+            Files.walk(path).sorted(Comparator.reverseOrder()).map(Path::toFile).forEach(File::delete);
         } else {
-            Files.deleteIfExists(jar);
+            Files.deleteIfExists(path);
         }
     }
 }
